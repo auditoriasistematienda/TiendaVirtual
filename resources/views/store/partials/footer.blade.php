@@ -1,0 +1,37 @@
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <h3>Mi tienda virtual</h3>
+            <p>Interfaz desarrollada para interactuar con el sistema del curso de Auditoria y Seguridad de la Informacion</p>
+        </div>
+        <div class="col-md-4">
+            <h3>Desarrollado por:</h3>
+            
+            <div class="autor-info">
+                    <img src="data:image/jpeg;base64,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" alt="" class="avatar">
+                    <p><a href="#" target="_blank">Repositorio en GitHub</a><br>Grupo formado para el curso de Auditoria y Seguridad de la Informacion</p>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3>Siguenos</h3>
+            <ul class="redes">
+                <li>
+                    <a target="_blank" href="https://github.com/JOGL3"><i class="fab fa-github"></i> Gutierrez Lizarbe</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/axelitoro"><i class="fab fa-github"></i> Lezcano Figueroa</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/jorgejlrr"><i class="fab fa-github"> Ramirez Rodriguez</i></a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/joqtan18"><i class="fab fa-github"></i> Rodriguez Richarte</a>
+                </li>
+                <li>
+                    <a target="_blank" href="https://github.com/RedJohn1426"><i class="fab fa-github"></i> Rodriguez Romero</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
