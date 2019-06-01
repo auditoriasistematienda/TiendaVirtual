@@ -11,26 +11,29 @@
 |
 */
 
-Route::bind('producto', function($slug){
-    return App\Productos::where('prod_slug', $slug)->first();
-});
+    Route::bind('producto', function($slug){
+        return App\Productos::where('prod_slug', $slug)->first();
+    });
 
-Route::get('/', [
-    'as'=>'home',
-    'uses'=>'StoreController@index'
-]);
+    Route::get('/', [
+        'as'=>'home',
+        'uses'=>'StoreController@index'
+    ]);
 
-Route::get('producto/{slug}',[
-    'as'=>'producto-detalle',
-    'uses'=>'StoreController@show'
-]);
-// Carrito
-Route::get('carrito/mostrar', [
-    'as'=>'carrito-mostrar',
-    'uses'=>'CartController@show'
-]);
+    Route::get('producto/{slug}',[
+        'as'=>'producto-detalle',
+        'uses'=>'StoreController@show'
+    ]);
 
-Route::get('carrito/agregar/{producto}', [
-    'as'=>'carrito-agregar',
-    'uses'=>'CartController@add'
-]);
+    // Carrito
+    Route::get('carrito/mostrar', [
+        'as'=>'carrito-mostrar',
+        'uses'=>'CartController@show'
+    ]);
+
+    Route::get('carrito/agregar/{producto}', [
+        'as'=>'carrito-agregar',
+        'uses'=>'CartController@add'
+    ]);
+
+ 

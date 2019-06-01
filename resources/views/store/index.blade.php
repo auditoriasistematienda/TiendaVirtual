@@ -12,7 +12,7 @@
                     <p class="card-text">{{$producto->prod_extract}}</p>
                     <h3 class="card-text"><span class="badge badge-success">Precio: S/. {{number_format($producto->prod_precio,2)}}</span></h3>
                     <p>
-                        <a class="btn btn-warning mt-1" href=""><i class="fas fa-cart-plus"></i> La quiero</a>
+                        <a class="btn btn-warning mt-1" href="{{route('carrito-agregar', $producto->prod_slug)}}"><i class="fas fa-cart-plus"></i> La quiero</a>
                         <a class="btn btn-primary mt-1" href="{{route('producto-detalle', $producto->prod_slug)}}"><i class="fas fa-chevron-circle-right"></i> Leer mas</a>
                     </p>
                 </div>
