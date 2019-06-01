@@ -9,21 +9,21 @@ class CartController extends Controller
 {
 
     public function __construct() {
-        if(!\Session::has('cart'))  \Session::put('cart', array());
+        if(!\Session::has('carrito'))  \Session::put('carrito', array());
     }
 
     // Show cart
     public function show() {
-        return \Session::get('cart');
+        return \Session::get('carrito');
     
     }
 
     // Add item
     public function add(Productos $producto) {
-        $carrito = \Session::get('cart');
+        $carrito = \Session::get('carrito');
         $producto->cantidad = 1;
         $carrito[$producto->prod_slug]=$producto;
-        \Session::put('cart', $carrito);
+        \Session::put('carrito', $carrito);
         return redirect()->route('carrito-mostrar');
     }
     // public function add($slug) {
@@ -34,7 +34,7 @@ class CartController extends Controller
     //     \Session::put('carrito', $carrito);
     //     return redirect()->route('carrito-mostrar');
     // }
-    
+
     // Delete item
     // Update item
     // Trash cart
