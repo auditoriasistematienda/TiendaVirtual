@@ -10,11 +10,6 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-    Route::bind('producto', function($slug){
-        return App\Productos::where('prod_slug', $slug)->first();
-    });
-
     Route::get('/', [
         'as'=>'home',
         'uses'=>'StoreController@index'
@@ -31,9 +26,22 @@
         'uses'=>'CartController@show'
     ]);
 
-    Route::get('carrito/agregar/{producto}', [
+    Route::get('carrito/agregar/{slug}', [
         'as'=>'carrito-agregar',
         'uses'=>'CartController@add'
     ]);
 
+    Route::get('carrito/eliminar/{slug}', [
+        'as'=> 'carrito-eliminar',
+        'uses'=>'CartController@delete'
+    ]);
+
+    Route::get('carrito/vaciar', [
+        'as'=> 'carrito-vaciar',
+        'uses'=>'CartController@trash'
+    ]);
  
+    Route::get('carrito/actualizar/{slug}/{cantidad}', [
+        'as'=> 'carrito-actualizar',
+        'uses'=>'CartController@update'
+    ]);

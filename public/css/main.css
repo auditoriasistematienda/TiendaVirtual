@@ -1,5 +1,10 @@
 body {
-    background: orange;
+    background: #ffa500d6;
+    margin:0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Nav */
@@ -13,8 +18,6 @@ body {
 footer {
     background: #222;
     text-align: center;
-    height: 318px;
-    font-size: 20px;
 }
 
 .col-md-4 {
@@ -69,4 +72,18 @@ ul.redes li a {
 
   .regresar-boton {
       margin: 33.5px;
+  }
+
+  /* Carrito */
+
+  .table-cart {
+      background: white;
+      border-radius: 1em;
+      margin-bottom: 30px;
+      padding: 1em;
+      top: 50%;
+  }
+
+  .table-cart img {
+      width: 50px;
   }

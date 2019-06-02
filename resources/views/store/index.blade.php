@@ -1,7 +1,7 @@
 @extends('store.template')
 
 @section('content')
-<div class="container text-center mt-4 mb-4">
+<div class="container text-center mt-4 mb-4" style="flex: 1;">
     <div class="row">
         @foreach($productos as $producto)
         <div class="col-sm-4">
