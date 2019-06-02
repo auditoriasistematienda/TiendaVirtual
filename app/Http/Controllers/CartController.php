@@ -16,7 +16,8 @@ class CartController extends Controller
     public function show() {
         $cart = \Session::get('cart');
         // dd($cart);
-        return view('store.cart', compact('cart'));
+        $total = $this->total();
+        return view('store.cart', compact('cart', 'total'));
     
         // return \Session::get('cart');
     }
@@ -62,4 +63,13 @@ class CartController extends Controller
     }
 
     // Total
+    private function total() {
+        $carrito = \Session::get('cart');
+        $total = 0;
+        foreach($carrito as $item) {
+            $total += $item->prod_precio * $item->cantidad;
+        }
+        return $total;
+
+    }
 }

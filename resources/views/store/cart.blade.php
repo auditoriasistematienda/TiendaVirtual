@@ -57,7 +57,8 @@
                             </tr>
                         @endforeach
                     </tbody>
-                </table>
+                </table><hr>
+                    <h3><span class="badge badge-success">Total: S/. {{number_format($total,2)}}</span></h3>
             </div>
             <hr>
             <p>
