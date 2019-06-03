@@ -15,14 +15,14 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Contacto</a>
       </li>
-      <!-- <li class="nav-item dropdown">
+      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user"></i>
+          <i class="fas fa-home"></i>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Iniciar sesión</a>
+            <a class="dropdown-item" href="#">Intranet</a>
         </div>
-      </li> -->
+      </li>
     </ul>
   </div>
 </nav>
