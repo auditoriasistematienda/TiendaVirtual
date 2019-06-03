@@ -67,4 +67,9 @@
         'as'=> 'orden-finalizada',
         'uses'=>'DetalleVentasController@realizarVenta'
     ]);
+
+    Route::get('graciascompra',[
+        'as'=>'gracias-compra',
+        'uses'=>'DetalleVentasController@actualizarCarrito'
+    ]);
     

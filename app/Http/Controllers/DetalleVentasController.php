@@ -21,8 +21,13 @@ class DetalleVentasController extends Controller
         }
 
         // return view('detalle-orden');
-        return redirect()->route('home');
+        return redirect()->route('gracias-compra');
         // return view('detalle-orden' + '/' + $id->'cli_id');
         // dd($carrito);
+    }
+
+    public function actualizarCarrito() {
+        \Session::forget('cart');
+        return view('store.graciascompra');
     }
 }
