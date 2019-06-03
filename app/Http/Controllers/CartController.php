@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Productos;
+use App\Clientes;
 
 class CartController extends Controller
 {
@@ -71,5 +72,20 @@ class CartController extends Controller
         }
         return $total;
 
+    }
+
+    // Datos de envio
+    public function shippingInformation() {
+        return view('store.datos-envio');
+    }
+
+    // Detalle del pedido
+    public function orderDetail($cli_id) {
+        if(count(\Session::get('cart')) <= 0) return redirect()->route('home');
+        $cli_id = Clientes::where('cli_id',$cli_id)->first();
+        $carrito = \Session::get('cart');
+        $total = $this->total();
+        // dd($cli_id);
+        return view('store.detalle-orden', compact('carrito', 'total'));
     }
 }

@@ -46,7 +46,14 @@
         'uses'=>'CartController@update'
     ]);
 
-    Route::get('detalle-orden}', [
+    Route::post('datos-envio','ClienteController@create');
+
+    Route::get('datos-envio', [
+        'as'=> 'datos-envio',
+        'uses'=>'CartController@shippingInformation'
+    ]);
+
+    Route::get('detalle-orden/{cli_id}', [
         'as'=> 'detalle-orden',
         'uses'=>'CartController@orderDetail'
     ]);

@@ -63,7 +63,7 @@
             <hr>
             <p>
                 <a href="{{route('home')}}" class="btn btn-primary"><i class="fas fa-chevron-circle-left"></i> Seguir comprando</a>
-                <a href="#" class="btn btn-primary"><i class="fas fa-chevron-circle-right"></i> Continuar</a>
+                <a href="{{route('datos-envio')}}" class="btn btn-primary"><i class="fas fa-chevron-circle-right"></i> Continuar</a>
             </p>
             @else
                 <h3><span class="badge badge-warning">No hay productos en el carrito</span></h3>
