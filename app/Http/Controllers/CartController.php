@@ -82,10 +82,10 @@ class CartController extends Controller
     // Detalle del pedido
     public function orderDetail($cli_id) {
         if(count(\Session::get('cart')) <= 0) return redirect()->route('home');
-        $cli_id = Clientes::where('cli_id',$cli_id)->first();
+        $cliente = Clientes::where('cli_id',$cli_id)->first();
         $carrito = \Session::get('cart');
         $total = $this->total();
-        // dd($cli_id);
-        return view('store.detalle-orden', compact('carrito', 'total'));
+        // dd($cliente);
+        return view('store.detalle-orden', compact('carrito', 'total', 'cliente'));
     }
 }
