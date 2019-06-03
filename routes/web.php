@@ -58,4 +58,13 @@
         'uses'=>'CartController@orderDetail'
     ]);
 
+    Route::get('compra/orden-realizada/{cli_id}', [
+        'as'=> 'orden-realizada',
+        'uses'=>'VentasController@realizarVenta'
+    ]);
+
+    Route::get('compra/orden-finalizada/{dv_idventa}', [
+        'as'=> 'orden-finalizada',
+        'uses'=>'DetalleVentasController@realizarVenta'
+    ]);
     

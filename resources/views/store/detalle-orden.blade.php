@@ -59,7 +59,7 @@
                 </h3><hr>
                 <p>
                     <a href="{{route('carrito-mostrar')}}" class="btn btn-primary"><i class="fas fa-chevron-circle-left"></i> Regresar</a>
-                    <a href="#" class="btn btn-warning"><i class="fas fa-check-circle"></i> Confirmar compra</a>
+                    <a href="{{route('orden-realizada', $cliente->cli_id)}}" class="btn btn-warning"><i class="fas fa-check-circle"></i> Confirmar compra</a>
                 </p>
             </div>
         </div>
