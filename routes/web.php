@@ -45,3 +45,10 @@
         'as'=> 'carrito-actualizar',
         'uses'=>'CartController@update'
     ]);
+
+    Route::get('detalle-orden}', [
+        'as'=> 'detalle-orden',
+        'uses'=>'CartController@orderDetail'
+    ]);
+
+    
